@@ -34,11 +34,11 @@ app.get('/about', (req, res) => {
 
 app.get('/all-places', (req, res) => {
   DownTown.find({ })
-    .then((data) => {
-      console.log('Data:', data);
+    .then((result) => {
+      res.send(result);
     })
     .catch((err) => {
-      console.log('error:', daerrorta);
+      console.log(err);
     });
 });
 
